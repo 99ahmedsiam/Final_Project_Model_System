@@ -118,10 +118,7 @@ public class MySQLConnection {
                         statusMap.put("loginType", "student");
                         statusMap.put("failedLogin", false);
                         statusMap.put("studentid", id);
-                    } else {
-                        System.out.println(md5Password(password));
-                        statusMap.put("failedLogin", true);
-                    }
+                    } 
                 }
             } else {
                 statusMap.put("isNotEmpty", false);
@@ -133,14 +130,5 @@ public class MySQLConnection {
         return statusMap;
     }
 
-    public static String md5Password(String regularPassword) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        byte[] hashInBytes = md.digest(regularPassword.getBytes(StandardCharsets.UTF_8));
-
-        StringBuilder sb = new StringBuilder();
-        for (byte b : hashInBytes) {
-            sb.append(String.format("%02x", b));
-        }
-        return sb.toString();
-    }
+    
 }

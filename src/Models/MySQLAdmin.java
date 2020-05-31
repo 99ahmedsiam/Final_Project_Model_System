@@ -1,7 +1,6 @@
 
 package Models;
 
-import static Models.MySQLConnection.md5Password;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -65,7 +64,7 @@ public class MySQLAdmin {
                     prestatement.setString(2, name);
                     prestatement.setString(3, phone);
                     prestatement.setString(4, address);
-                    prestatement.setString(5, md5Password(password));
+                    prestatement.setString(5, (password));
                     prestatement.setString(6, "email");
                     prestatement.setString(7, "last name");
 

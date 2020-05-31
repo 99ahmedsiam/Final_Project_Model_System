@@ -1,7 +1,6 @@
 
 package Models;
 
-import static Models.MySQLConnection.md5Password;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

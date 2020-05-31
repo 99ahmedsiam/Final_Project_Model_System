@@ -1,7 +1,7 @@
 
 package Models;
 
-import static Models.MySQLConnection.md5Password;
+
 import com.google.gson.GsonBuilder;
 import com.mongodb.MongoClient;
 import com.mongodb.client.AggregateIterable;
@@ -110,7 +110,7 @@ public class MongoAdmin {
                             .append("name", name)
                             .append("phone", phone)
                             .append("address", address)
-                            .append("password", md5Password(password))
+                            .append("password",(password))
                             .append("email", "email"));
                     statusMap.put("isAdded", true);
                 }
